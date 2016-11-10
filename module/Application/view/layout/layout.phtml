@@ -2,23 +2,48 @@
 
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <?= $this->headTitle('Coffee Market House')->setSeparator(' - ')->setAutoEscape(false) ?>
 
-        <?= $this->headMeta()
-                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
-                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
-        ?>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Coofee Market House</title>
+
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
 
         <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
             ->prependStylesheet($this->basePath('landing_page/vendor/bootstrap/css/bootstrap.min.css'))
             ->prependStylesheet($this->basePath('landing_page/vendor/font-awesome/css/font-awesome.min.css'))
+            ?>
+            <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
             ->prependStylesheet($this->basePath('landing_page/css/grayscale.min.css'))
         ?>
 
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+        <!-- Scripts -->
+        <?= $this->headScript()
+            ->prependFile($this->basePath('landing_page/vendor/bootstrap/js/bootstrap.min.js'))
+            ->prependFile($this->basePath('landing_page/vendor/jquery/jquery.js'))
+            ->prependFile($this->basePath('landing_page/js/grayscale.min.js'))
+        ?>
+
+        <?=
+            $this->HeadScript()->appendFile('https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js','text/javascript');
+        ?>
+
+
+
 
     </head>
 
@@ -32,7 +57,7 @@
                         Menu <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand page-scroll" href="#page-top">
-                        <i class="fa fa-play-circle"></i> <span class="light">Start</span> Bootstrap
+                        <i class="fa fa-play-circle"></i> <span class="light">Coffee</span> Market
                     </a>
                 </div>
 
@@ -44,13 +69,13 @@
                             <a href="#page-top"></a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#about">About</a>
+                            <a class="page-scroll" href="#about">Acerca</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#download">Download</a>
+                            <a class="page-scroll" href="#download">Producto</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#contact">Contact</a>
+                            <a class="page-scroll" href="#contact">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -65,9 +90,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h1 class="brand-heading">Grayscale</h1>
-                            <p class="intro-text">A free, responsive, one page Bootstrap theme.
-                                <br>Created by Start Bootstrap.</p>
+                            <h1 class="brand-heading">Coffee Market House</h1>
+                            <p class="intro-text">El mejor café a un click de distancia</p>
                             <a href="#about" class="btn btn-circle page-scroll">
                                 <i class="fa fa-angle-double-down animated"></i>
                             </a>
@@ -125,30 +149,12 @@
             </div>
         </section>
 
-        <!-- Map Section -->
-        <div id="map"></div>
-
-
         <!-- Footer -->
         <footer>
             <div class="container text-center">
                 <p>Copyright &copy; Your Website 2016</p>
             </div>
         </footer>
-
-        <?= $this->inlineScript()
-            ->prependFile($this->basePath('landing_page/vendor/jquery/jquery.js'))
-            ->prependFile($this->basePath('landing_page/vendor/bootstrap/js/bootstrap.min.js'))
-            ->prependFile($this->basePath('landing_page/js/grayscale.min.js'))
-
-        ?>
-
-        <!-- Plugin JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-        <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
 
     </body>
 
